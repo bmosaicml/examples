@@ -101,7 +101,6 @@ def test_full_forward_and_backward(batch_size=2):
     updated_params = next(model.parameters()).clone().data
     assert not torch.equal(original_params, updated_params)
 
-
 def test_attention_mechanism(batch_size=2):
     test_cfg, model, _ = get_objs(conf_path='yamls/mosaic_gpt/125m.yaml')
 
